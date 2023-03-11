@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 import "react-tooltip/dist/react-tooltip.css";
-import { Link, useMatch, useResolvedPath, useLocation } from "react-router-dom";
+import { Link, useMatch, useResolvedPath } from "react-router-dom";
 import { BiFoodMenu, BiCoffee } from "react-icons/bi";
 import { CgProfile } from "react-icons/cg";
-import { TbPigMoney } from "react-icons/tb";
 import { MdDarkMode, MdLogout, MdLogin } from "react-icons/md";
 import { Tooltip } from "react-tooltip";
 import "./styles/App.css";

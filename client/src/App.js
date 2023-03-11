@@ -6,9 +6,7 @@ import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import Thanks from "./pages/Thanks";
 import Navbar from "./Navbar";
-import { BrowserRouter } from "react-router-dom";
 import { Route, Routes } from "react-router-dom";
-import { useState } from "react";
 import "./styles/App.css";
 
 // apollo client configuration

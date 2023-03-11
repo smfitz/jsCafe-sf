@@ -1,5 +1,4 @@
 import React from "react";
-
 import { useState } from "react";
 import { useMutation } from "@apollo/client";
 import { ADD_HISTORY } from "../utils/mutations";
@@ -9,7 +8,7 @@ import espresso from "../images/espresso2.jpeg";
 function MenuItems(props) {
   // shopping cart, does cart need to be an [] or a {}?
   const [cart, setCart] = useState([]);
-  const [cartDiv, setDiv] = useState({});
+  // const [cartDiv, setDiv] = useState({});
 
   function addToCart(x) {
     const updateCart = [
@@ -47,11 +46,11 @@ function MenuItems(props) {
     <>
       {props.items.map((x) => (
         <div className="m-10 w-full max-w-sm bg-gray-300 border border-gray-200 rounded-lg shadow">
-          <a href="#">
+          <a>
             <img className="p-8 rounded-t-lg" src={espresso} alt="" />
           </a>
           <div className="px-5 pb-5">
-            <a href="#">
+            <a>
               <h5 className="text-2xl font-semibold tracking-tight text-gray-900 dark:text-white">
                 {x.product_name}
               </h5>
@@ -62,7 +61,6 @@ function MenuItems(props) {
                 ${x.price}
               </span>
               <a
-                href="#"
                 className="text-white bg-teal-600 hover:bg-teal-800 focus:ring-4 focus:outline-none focus:ring-teal-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
                 onClick={() => {
                   console.log(x);
@@ -88,7 +86,6 @@ function MenuItems(props) {
           ))}
           <div className="flex items-center pt-20 pb-5 justify-center">
             <a
-              href="#"
               className="text-white static bg-teal-600 hover:bg-teal-800 focus:ring-4 focus:outline-none focus:ring-teal-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
               onClick={() => {
                 console.log(cart);

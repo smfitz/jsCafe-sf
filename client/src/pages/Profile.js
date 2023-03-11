@@ -1,4 +1,3 @@
-import React, { useState, useEffect } from "react";
 import { RiStarSFill, RiStarSLine } from "react-icons/ri";
 import { useQuery } from "@apollo/client";
 

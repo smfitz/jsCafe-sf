@@ -1,13 +1,12 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import { useMutation } from "@apollo/client";
 import { LOGIN_USER } from "../utils/mutations";
 import { Link } from "react-router-dom";
 import Auth from "../utils/auth";
 
 const Login = (props) => {
-  const [darkMode, setDarkMode] = useState(false);
   const [formState, setFormState] = useState({ email: "", password: "" });
-  const [login, { error, data }] = useMutation(LOGIN_USER);
+  const [login] = useMutation(LOGIN_USER);
 
   // update state based on form input changes
   const handleChange = (event) => {
@@ -29,8 +28,8 @@ const Login = (props) => {
       });
 
       Auth.login(data.login.token);
-    } catch (e) {
-      console.error(e);
+    } catch (error) {
+      console.error(error);
     }
 
     // clear form values
