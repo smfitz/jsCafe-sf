@@ -40,7 +40,6 @@ const Login = (props) => {
   };
   return (
     <>
-      <div className={darkMode ? "dark" : ""}>
         <div className="w-screen h-screen bg-gray-600 text-gray-800 dark:bg-gray-400">
           <div className="flex justify-center items-center h-full flex-wrap content-around">
             <div>
